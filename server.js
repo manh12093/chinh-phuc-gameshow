@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Cho phép server đọc các file tĩnh trong thư mục public (chứa index.html, host.html, play.html, ảnh, âm thanh)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '.')));
 
 // Bộ nhớ tạm lưu trữ danh sách phòng (khi đưa lên server miễn phí, dữ liệu này lưu trên RAM)
 const rooms = {};
